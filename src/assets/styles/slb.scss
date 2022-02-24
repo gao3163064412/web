@@ -1,0 +1,386 @@
+// ===== 施雷斌专用样式，如需修改请先联系本人 =====
+
+/*
+  表格操作栏-----段珍珍梳理的按钮样式
+  1.新增： icon="el-icon-plus" style="color:#5487FF;"
+  2.修改、编辑： class="iconfont icon-029xiugai-3" style="color:#FFC72E;"
+  3.删除、强退： icon="el-icon-delete" style="color: #FF6D8A;"
+  4.数据权限： class="iconfont icon-shujuquanxian1" style="color:#BA9DED;"
+  5.查看、详情： class="iconfont icon-chakan" style="color:#5487FF;"
+  6.下载： icon="el-icon-download" style="color:#FFC72E;"
+  7.还原： icon="el-icon-refresh-left" style="color:#F05853;"
+  8.价格明细 class="iconfont icon-jiagemingxi" style="color:#A7E65C;"
+  9.执行一次 class="iconfont icon-zhihang" style="color:#5BD1C9;"
+  10.同步 style="color:#F08B3A"
+  11.生成代码 class="iconfont icon-shengchengdaima" style="color:#A7E65C"
+  12.审核 class="iconfont icon-tubiaolunkuo-" style="color:#39E399"
+  13.上传 icon="el-icon-upload2" style="color:#BA9DED;"
+  14.任务指派 class="iconfont icon-renwuzhipai" style="color:#44D295" 色号待确认
+  15.完成实验 class="iconfont icon-wancheng" style="color:#F08B3A"
+  16.重置密码 class="iconfont icon-cangpeitubiao-zhongzhimima" style="color: #CAD93F"
+  17.分配角色 class="iconfont icon-fenpeijiaose" style="color:#FE8463"
+  18.确认收费 class="iconfont icon-shoushuguanlixitong_querenshoufei" style="color:#407BD5"
+  19.调整价格 class="iconfont icon-43tiaozhengjiage" style="color:#44D295"
+  20.价格明细 class="iconfont icon-jiagemingxi" style="color:#5487FF;"
+  21.修改记录 class="iconfont icon-xiugai" style="color:#F08B3A"
+  22.填写报告 class="iconfont icon-ziyuan" style="color:#3D939D"
+*/
+
+// =========================== slb自定义样式 ===========================
+// 全局变量
+$--slb-color-red: #ff4949;
+$--slb-color-green: #09bb07;
+$--slb-color-blue: #1890ff;
+// 字体大小
+.font12 {
+  font-size: 12px;
+}
+.font16 {
+  font-size: 16px;
+}
+// 文字颜色
+.c_17 {
+  color: #171717;
+}
+.c_green {
+  color: $--slb-color-green;
+}
+.c_red {
+  color: $--slb-color-red;
+}
+.c_blue {
+  color: $--slb-color-blue;
+}
+// margin-bottom样式
+.mb12 {
+  margin-bottom: 12px;
+}
+.mb13 {
+  margin-bottom: 13px;
+}
+// margin-top
+.mt12 {
+  margin-top: 12px;
+}
+// padding-left
+.pl8 {
+  padding-left: 8px;
+}
+.pl24 {
+  padding-left: 24px;
+}
+// padding-right
+.pl24 {
+  padding-right: 24px;
+}
+.pl50 {
+  padding-left: 50px;
+}
+.pl55 {
+  padding-left: 55px;
+}
+// padding-top
+.pt4 {
+  padding-top: 4px;
+}
+.pt12 {
+  padding-top: 12px;
+}
+.pt20 {
+  padding-top: 20px;
+}
+.pt22 {
+  padding-top: 22px;
+}
+// padding-right
+.pr10 {
+  padding-right: 10px;
+}
+.pr50 {
+  padding-right: 50px;
+}
+.pr80 {
+  padding-right: 80px;
+}
+// padding-bottom
+.pb12 {
+  padding-bottom: 12px;
+}
+.pb20 {
+  padding-bottom: 20px;
+}
+// flex布局
+.flx {
+  display: flex;
+}
+.column {
+  flex-direction: column;
+}
+.flx1 {
+  flex: 1;
+}
+.al_c {
+  align-items: center;
+}
+.al_s {
+  align-items: flex-start;
+}
+.al_con_start {
+  align-content: flex-start;
+}
+.al_con_between {
+  align-content: space-between;
+}
+.just_between {
+  justify-content: space-between;
+}
+.just_around {
+  justify-content: space-around;
+}
+.just_center {
+  justify-content: center;
+}
+.just_start {
+  justify-content: flex-start;
+}
+.just_end {
+  justify-content: flex-end;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+// 定位样式
+.relative {
+  position: relative;
+}
+// 背景颜色样式
+.bg_fff {
+  background: #fff;
+}
+// 其他样式
+.wid100 {
+  width: 100% !important;
+}
+.hei100 {
+  height: 100%;
+}
+.bdbtm {
+  border-bottom: 1px solid #ececec;
+}
+.bold {
+  font-weight: bold;
+}
+.ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+// =========================== elementui自定义样式--不会影响全局 ===========================
+// 设置form下的所有label宽度为  auto  ；使用方式 为form设置样式 form_label_auto
+.form_label_auto .el-form-item__label {
+  width: auto;
+}
+// drawer中搜索部分样式  ；使用方式 为drawer中的form设置样式 drawer_search_inline
+.drawer_search_inline .el-form-item {
+  display: inline-block;
+}
+.el-drawer__body .drawer_search_inline .el-form-item__content {
+  width: auto !important;
+  margin-left: 0 !important;
+}
+// 设置form下的底部操作按钮样式
+.form_handle_area {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: #fff;
+  bottom: 0;
+  height: 66px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+//设置form-item宽度 占剩余空间100%
+.form_item_wid100 .el-form-item__content,
+  // 设置form下所有form-item宽度 占剩余空间100%
+  .form_allitem_wid100 .el-form-item__content {
+  flex: 1;
+}
+
+//修改表单部分样式
+.el-drawer {
+  background: #fff !important;
+}
+
+// switch 文字内显
+.el-switch__label {
+  position: absolute;
+  display: none;
+  font-size: 11px !important;
+  color: #fff !important;
+}
+.el-switch__label * {
+  font-size: 11px !important;
+}
+/*打开时文字位置设置*/
+.el-switch__label--right {
+  z-index: 1;
+  right: 23px; // 这里是重点
+  top: 0.5px;
+}
+/*关闭时文字位置设置*/
+.el-switch__label--left {
+  z-index: 1;
+  left: 23px; // 这里是重点
+  top: 0.5px;
+}
+/*显示文字*/
+.el-switch__label.is-active {
+  display: block;
+}
+.el-switch__core {
+  width: 45px;
+  height: 22px;
+  border: 2px solid #dcdfe6;
+  border-radius: 13px;
+}
+.is-disabled {
+  .el-input__inner,
+  .el-radio__label {
+    color: #606266 !important;
+  }
+}
+
+// el-tabs设置背景色以及间距
+.tabs_white > div {
+  background-color: #fff;
+  padding: 0 20px;
+}
+.tabs_white .el-tabs__nav-wrap::after {
+  background-color: transparent;
+}
+.tabs_white .el-tabs__content {
+  min-height: 680px;
+}
+
+// el-table中的列el-table-column； 为 title添加红色 * 号，用法 el-table-column中添加 label-class-name="star_red"
+.star_red.cell::before {
+  content: "*";
+  padding-right: 2px;
+  color: $--slb-color-red;
+}
+
+.form_label_400 {
+  .el-form-item {
+    width: 400px;
+  }
+}
+
+.form_item_wid90 .el-form-item {
+  width: 90%;
+}
+// =========================== 页面根部使用 slbCont 自定义样式 ===========================
+// .slbCont {
+// }
+
+// =========================== 设置的全局样式 ===========================
+// 设置drawer中的form-item的行高line-height为rem，防止部分浏览器自动换行
+.el-drawer__body .el-form-item > .el-form-item__content {
+  line-height: 2.7rem;
+}
+// 设置所有table表头样式  // 设置所有table内容部分样式
+.el-table__header tr,
+.el-table__header th,
+.el-table__body tr,
+.el-table__body td {
+  padding: 0;
+  height: 40px;
+}
+// 设置抽屉顶部样式
+.el-drawer__header {
+  text-align: center;
+  background: #1890ff;
+  font-weight: bold;
+  color: #ffffff !important;
+  height: 50px;
+  font-size: 16px;
+  line-height: 50px;
+  padding: 0 !important;
+  margin-bottom: 0 !important;
+}
+// 设置抽屉content样式
+.el-drawer__body {
+  overflow-y: auto;
+  background: #f5f5f5;
+  padding: 18px 18px 84px 18px !important;
+  //不分块的样式
+  .paddingBox {
+    padding: 30px 30px 8px;
+    background: #fff;
+    min-height: 100%;
+    // .el-form-item {
+    //     margin-bottom: 18px;
+    // }
+  }
+}
+//查看页面没有底部按钮，padding-bottom需设置 （给查看弹框的<el-drawer>设置lookPage）
+.lookPage {
+  .el-drawer__body {
+    padding-bottom: 18px !important;
+  }
+}
+
+// tabs 样式设置
+.slb_tabs.el-tabs {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  .el-tabs__header,
+  .el-tabs__content {
+    background-color: #fff;
+    box-sizing: border-box;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .el-tabs__content {
+    flex: 1;
+    padding: 30px;
+  }
+  .el-tabs__nav-wrap::after {
+    height: 0;
+  }
+}
+// draggable 组件下span样式  inspect下log页面有使用
+.span_color > span {
+  border-radius: 2px;
+  color: #61616e !important;
+}
+.span_color:nth-child(even) > span {
+  border: 1px solid #1890ff;
+  background-color: #eef9fe;
+  .el-tag__close:hover {
+    background-color: #1890ff;
+    color: #fff;
+  }
+  .el-tag__close {
+    color: #1890ff;
+  }
+}
+.span_color:nth-child(odd) > span {
+  border: 1px solid #e36767;
+  background: #fff2f2;
+  .el-tag__close:hover {
+    background-color: #e36767;
+    color: #fff;
+  }
+  .el-tag__close {
+    color: #e36767;
+  }
+}
+// tree 样式
+.slb_tree {
+  height: 600px;
+  overflow-y: auto;
+}

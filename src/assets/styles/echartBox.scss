@@ -1,0 +1,73 @@
+.noData {
+
+}
+.box {
+  position: relative;
+  background-color: #fff;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  .setting {
+    position: absolute;
+    right: 30px;
+    top: 12px;
+    font-size: 19px;
+    color: #999;
+    cursor: pointer;
+  }
+}
+.searchBox {
+  //margin-bottom: 10px;
+  padding: 0 20px;
+  border-bottom: 1px solid #E6EBF5;
+  &.searchBox1 {
+    .el-date-editor.el-input, .el-date-editor.el-input__inner {
+      width: 102px;
+    }
+    .el-select {
+      width: 102px;
+    }
+  }
+  .typeList {
+    display: inline-block;
+    line-height: 48px;
+    .typeItem {
+      display: inline-block;
+      font-size: 14px;
+      cursor: pointer;
+      margin-right: 20px;
+      &.active {
+        color: #1890FF;
+        border-bottom: 2px solid #1890FF;
+      }
+    }
+  }
+}
+
+.topBox {
+  .seachBoxMinHeight {
+    min-height: 96px;
+  }
+}
+
+
+::v-deep .el-drawer__body {
+  .el-form-item {
+    margin-left: 10px;
+  }
+  .el-form-item__label {
+    line-height: 31px;
+  }
+  .el-form-item__content {
+    width: 200px !important;
+    margin-left: 0 !important;
+  }
+  .el-form-item {
+    display: inline-block;
+  }
+  .searchBox {
+    background-color: #fff;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+}

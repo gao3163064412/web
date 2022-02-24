@@ -1,0 +1,356 @@
+//温度滑块
+.temperature {
+  .el-form-item {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    label {
+      width: 92px;
+      min-width: 92px;
+    }
+    .el-form-item__content {
+      margin-left: 0 !important;
+    }
+    .el-slider {
+      width: 80% !important;
+    }
+  }
+
+}
+.el-dialog:not(.is-fullscreen){margin-top: 20vh!important;}
+// .el-dialog{margin-top: 300px!important;}
+.el-dialog__header{
+  background: #1890ff;
+  text-align: left;
+  font-size:16px;
+  padding:8px 20px;
+  .el-dialog__title{
+    color: #ffffff;
+  }
+  .el-icon-close{
+    color: #ffffff;
+  }
+}
+.el-dialog__headerbtn{
+  top:8px;
+}
+.el-dialog__footer{
+  padding:10px!important;
+  text-align: right!important;
+  border-top:1px solid #ECECEC;
+}
+/**
+  搜索条件
+  公共结构1:(使用场景：搜索条件<=4个）
+    <el-form>
+      <div class="searchBtnBox">
+        <div class="all">
+          <el-form-item>搜索条件....</el-form-item>
+        </div>
+      </div>
+     </el-form>
+     公共结构2：（使用场景：搜索条件>4个）
+     <el-form>
+      <div class="searchBtnBox">
+        <div class="left">
+          <el-form-item>搜索条件....</el-form-item>
+        </div>
+        <div class="right">
+          <el-form-item>
+            <el-button></el-button>
+          </el-form-item>
+        </div>
+      </div>
+     </el-form>
+ */
+.searchBtnBox {
+  display: flex;justify-content: flex-start;align-items: flex-start;flex-wrap: wrap;
+  .all {
+    width: 100%;
+    .el-form-item {
+      margin-right: 10px !important;
+      .el-select,.el-input,.el-date-editor {
+        width: 230px !important;
+      }
+    }
+  }
+  .left {
+    width: 81%;
+    .transContent {
+      display: inline-block;
+    }
+    .el-form-item {
+      margin-right: 10px !important;
+      .el-select,.el-input,.el-date-editor {
+        width: 230px !important;
+      }
+    }
+  }
+  .right {
+    width: 19%;
+    .el-form-item {
+      margin-right: 0 !important;
+      margin-left: 0 !important;
+    }
+    .el-button {
+      margin-left: 0 !important;
+      margin-right: 10px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+
+/*
+  表格操作栏 
+  1.新增： icon="el-icon-plus" style="color:#5487FF;"
+  2.修改、编辑： class="iconfont icon-029xiugai-3" style="color:#FFC72E;"
+  3.删除、强退： icon="el-icon-delete" style="color: #FF6D8A;"
+  4.数据权限： class="iconfont icon-shujuquanxian1" style="color:#BA9DED;"
+  5.查看、详情： class="iconfont icon-chakan" style="color:#5487FF;"
+  6.下载： icon="el-icon-download" style="color:#FFC72E;"
+  7.还原： icon="el-icon-refresh-left" style="color:#F05853;"
+  8.价格明细 class="iconfont icon-jiagemingxi" style="color:#A7E65C;"
+  9.执行一次 class="iconfont icon-zhihang" style="color:#5BD1C9;"
+  10.同步 style="color:#F08B3A"
+  11.生成代码 class="iconfont icon-shengchengdaima" style="color:#A7E65C"
+  12.审核 class="iconfont icon-tubiaolunkuo-" style="color:#39E399"
+  13.上传 icon="el-icon-upload2" style="color:#BA9DED;"
+  14.任务指派 class="iconfont icon-renwuzhipai" style="color:#44D295" 色号待确认
+  15.完成实验 class="iconfont icon-wancheng" style="color:#F08B3A"
+  16.重置密码 class="iconfont icon-cangpeitubiao-zhongzhimima" style="color: #CAD93F"
+  17.分配角色 class="iconfont icon-fenpeijiaose" style="color:#FE8463"
+  18.确认收费 class="iconfont icon-shoushuguanlixitong_querenshoufei" style="color:#407BD5"
+  19.调整价格 class="iconfont icon-43tiaozhengjiage" style="color:#44D295"
+  20.价格明细 class="iconfont icon-jiagemingxi" style="color:#5487FF;"
+  21.修改记录 class="iconfont icon-xiugai" style="color:#F08B3A"
+  22.填写报告 class="iconfont icon-ziyuan" style="color:#3D939D" 
+*/
+
+//表格上方操作按钮
+.el-button.iconfont span {
+  margin-left: 5px!important;
+}
+.el-button.iconfont.el-button--text span {
+  margin-left: 0;
+}
+//1.新增 addBtn
+.el-button.is-plain.addBtn, .el-button.is-plain.is-disabled.addBtn,.el-button.is-plain.is-disabled.addBtn:hover, .el-button.is-plain.is-disabled.addBtn:focus {
+  color: #5487FF;
+  background: #5487FF;
+  color: #FFFFFF;
+  border-color: #8FB1FF;
+}
+.el-button.is-plain.addBtn:hover, .el-button.is-plain.addBtn:focus {
+  background: #5487FF;
+  border-color: #2D6CFF;
+  color: #FFFFFF;
+}
+
+//2.修改 editBtn iconfont icon-xiugai
+.el-button.editBtn, .el-button.is-plain.is-disabled.editBtn,.el-button.is-plain.is-disabled.editBtn:hover, .el-button.is-plain.is-disabled.editBtn:focus {
+  color: #F08B3A;
+  background: #FFD7B6;
+  border-color: #FEB67C;
+}
+.el-button.is-plain.editBtn:hover, .el-button.is-plain.editBtn:focus {
+  background: #F08B3A;
+  border-color: #E87C25;
+  color: #FFFFFF;
+}
+
+//3.删除 deleteBtn
+//3.1 清空 deleteBtn iconfont icon-xiangpica
+.el-button.is-plain.deleteBtn, .el-button.is-plain.is-disabled.deleteBtn,.el-button.is-plain.is-disabled.deleteBtn:hover, .el-button.is-plain.is-disabled.deleteBtn:focus {
+  color: #FF6D8A;
+  background: #FFE2E8;
+  border-color: #FF9DB0;
+}
+.el-button.is-plain.deleteBtn:hover, .el-button.is-plain.deleteBtn:focus {
+  background: #FF6D8A;
+  border-color: #FF5072;
+  color: #FFFFFF;
+}
+
+//4.导出 exportBtn iconfont icon-daochushuju
+.el-button.is-plain.exportBtn, .el-button.is-plain.is-disabled.exportBtn,.el-button.is-plain.is-disabled.exportBtn:hover, .el-button.is-plain.is-disabled.exportBtn:focus {
+  color: #39E399;
+  background: #CCF6E4;
+  border-color: #8AFFCC;
+}
+.el-button.is-plain.exportBtn:hover, .el-button.is-plain.exportBtn:focus {
+  background: #39E399;
+  border-color: #0CDD82;
+  color: #FFFFFF;
+}
+
+//5.清理缓存 cleanCacheBtn iconfont icon-qingchuhuancun
+.el-button.is-plain.cleanCacheBtn, .el-button.is-plain.is-disabled.cleanCacheBtn,.el-button.is-plain.is-disabled.cleanCacheBtn:hover, .el-button.is-plain.is-disabled.cleanCacheBtn:focus {
+  color: #CAD93F;
+  background: #FBFFD3;
+  border-color: #DCEA58;
+}
+.el-button.is-plain.cleanCacheBtn:hover, .el-button.is-plain.cleanCacheBtn:focus {
+  background: #CAD93F;
+  border-color: #B5C334;
+  color: #FFFFFF;
+}
+
+//6.日志 logBtn iconfont icon-rizhi
+.el-button.is-plain.logBtn, .el-button.is-plain.is-disabled.logBtn,.el-button.is-plain.is-disabled.logBtn:hover, .el-button.is-plain.is-disabled.logBtn:focus {
+  color: #5BD1C9;
+  background: #C7FCF8;
+  border-color: #93C8C4;
+}
+.el-button.is-plain.logBtn:hover, .el-button.is-plain.logBtn:focus {
+  background: #5BD1C9;
+  border-color: #44B6AE;
+  color: #FFFFFF;
+}
+
+//7.导入 importBtn iconfont icon-daoru1
+.el-button.is-plain.importBtn, .el-button.is-plain.is-disabled.importBtn,.el-button.is-plain.is-disabled.importBtn:hover, .el-button.is-plain.is-disabled.importBtn:focus {
+  color: #BA9DED;
+  background: #EBDFFF;
+  border-color: #D0B8FB;
+}
+.el-button.is-plain.importBtn:hover, .el-button.is-plain.importBtn:focus {
+  background: #BA9DED;
+  border-color: #A68DD3;
+  color: #FFFFFF;
+}
+
+//8.打印 printBtn
+.el-button.is-plain.printBtn, .el-button.is-plain.is-disabled.printBtn,.el-button.is-plain.is-disabled.printBtn:hover, .el-button.is-plain.is-disabled.printBtn:focus {
+  color: #5FC7F6;
+  background: #D0F1FF;
+  border-color: #94DDFE;
+}
+.el-button.is-plain.printBtn:hover, .el-button.is-plain.printBtn:focus {
+  background: #5FC7F6;
+  border-color: #27A9E3;
+  color: #FFFFFF;
+}
+
+//9.生成 createBtn iconfont icon-shengcheng
+.el-button.is-plain.createBtn, .el-button.is-plain.is-disabled.createBtn,.el-button.is-plain.is-disabled.createBtn:hover, .el-button.is-plain.is-disabled.createBtn:focus {
+  color: #A7E65C;
+  background: #E6FFC9;
+  border-color: #C7FA89;
+}
+.el-button.is-plain.createBtn:hover, .el-button.is-plain.createBtn:focus {
+  background: #A7E65C;
+  border-color: #A0D463;
+  color: #FFFFFF;
+}
+
+//10.领取 receiveBtn iconfont icon-lingqu
+.el-button.is-plain.receiveBtn, .el-button.is-plain.is-disabled.receiveBtn,.el-button.is-plain.is-disabled.receiveBtn:hover, .el-button.is-plain.is-disabled.receiveBtn:focus {
+  color: #A7E65C;
+  background: #E6FFC9;
+  border-color: #C7FA89;
+}
+.el-button.is-plain.receiveBtn:hover, .el-button.is-plain.receiveBtn:focus {
+  background: #A7E65C;
+  border-color: #A0D463;
+  color: #FFFFFF;
+}
+
+//11.留样登记 registerBtn iconfont icon-dengjizongshu
+.el-button.is-plain.registerBtn, .el-button.is-plain.is-disabled.registerBtn,.el-button.is-plain.is-disabled.registerBtn:hover, .el-button.is-plain.is-disabled.registerBtn:focus {
+  color: #407BD5;
+  background: #E4EFFF;
+  border-color: #7D91AF;
+}
+.el-button.is-plain.registerBtn:hover, .el-button.is-plain.registerBtn:focus {
+  background: #407BD5;
+  border-color: #2255A4;
+  color: #FFFFFF;
+}
+//12.开放预约 icon="el-icon-s-promotion" openBook
+.el-button.is-plain.openBook, .el-button.is-plain.is-disabled.openBook,.el-button.is-plain.is-disabled.openBook:hover, .el-button.is-plain.is-disabled.openBook:focus {
+  color: #42AAC7;
+  background: #C9E8F1;
+  border-color: #97D3E3;
+}
+.el-button.is-plain.openBook:hover, .el-button.is-plain.openBook:focus {
+  background: #42AAC7 ;
+  border-color: #0086AB;
+  color: #FFFFFF;
+}
+//12.是否上岗 icon="el-icon-s-promotion" whetherDuty
+.el-button.is-plain.whetherDuty, .el-button.is-plain.is-disabled.whetherDuty,.el-button.is-plain.is-disabled.whetherDuty:hover, .el-button.is-plain.is-disabled.whetherDuty:focus {
+  color: #FA786E;
+  background: #FCC0BB;
+  border-color: #FEADA6;
+}
+.el-button.is-plain.whetherDuty:hover, .el-button.is-plain.whetherDuty:focus {
+  background: #FA786E ;
+  border-color: #EB3C2F;
+  color: #FFFFFF;
+}
+//13.下载 downLoadFiles
+.el-button.is-plain.downLoadFiles, .el-button.is-plain.is-disabled.downLoadFiles,.el-button.is-plain.is-disabled.downLoadFiles:hover, .el-button.is-plain.is-disabled.downLoadFiles:focus {
+  color: #D45D87;
+  background: #F4D2DE;
+  border-color: #EAA8BF;
+}
+.el-button.is-plain.downLoadFiles:hover, .el-button.is-plain.downLoadFiles:focus {
+  background: #DF81A2  ;
+  border-color: #D45D87;
+  color: #FFFFFF;
+}
+
+
+/*全局滚动条样式*/
+::-webkit-scrollbar {
+  width: 5px;
+  height: 14px;
+}
+
+::-webkit-scrollbar-thumb {
+  /* background-color: #01c8dc;
+  border-radius: 3px; */
+  background-color: #b6b6b6;
+}
+/*全局滚动条样式结束*/
+
+
+
+/**end**/
+//.el-table--group, .el-table--border {
+  //border: none;
+//}
+//.el-table__header, .el-table__body, .el-table__footer {
+  //border-left: 1Px solid #dfe6ec;
+  //border-top: none;
+//}
+
+/**修正px2rem后，el-select多选多行闪动问题**/
+.el-cascader__tags .el-tag,.el-select .el-tag {
+  margin: 2Px 0 2Px 6Px;
+}
+.el-tag--small {
+  height: 26Px;
+  line-height: 26Px;
+  padding: 0 6Px;
+}
+//修正px2rem后，委托单弹框公共样式
+.sequence {
+  .el-upload--picture-card {
+    width: 150Px;
+    height: 150Px;
+    line-height: 150Px;
+  }
+}
+.el-textarea textarea{
+  padding-bottom: 13px;
+}
+.el-textarea .el-input__count{
+  height: 12px;
+  line-height: 12px;
+}
+
